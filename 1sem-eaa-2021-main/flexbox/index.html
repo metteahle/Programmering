@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>HTML Boilerplate</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- link rel="stylesheet" href="css/reset.css" -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- favicon = ikon i faneblad / browser -->
+	<link rel="icon" type="images/logo1" href="images/logo1.png" />
+</head>
+
+<body>
+
+	<!-- "Wrapperen" holder sammen på dit design, fx hvis det skal centreres eller lign. -->
+	<div id="wrap">
+
+		<!-- Emmet tip: nav>ul>li{Menu $}*3 -->
+		<nav>
+			<!-- Menuer laves som regel i form af uordnede lister.
+					 Listerne kan styles så de går vandret eller lodret -->
+			<ul>
+				<li><a href="#"> Shop </a></li>
+				<li><a href="#"> Besøg os </a></li>
+				<li><a href="#"> Info </a></li>
+			</ul>
+
+		</nav>
+
+		<header>
+			<!-- site navn plus evt tagline og logo -->
+			<a href="index.html">
+				<img src="images/Kringle.png" alt="logo">
+			</a>
+
+			<!-- ofte reserveres h1 til site-navn -->
+			<h1> Bakery Deliciux </h1>
+
+		</header>
+
+		<!-- indhold -->
+		<div id="content">
+			<aside>
+				<!-- sidebar -->
+				<h4> h4 Sidebar </h4>
+				<ul>
+					<li><a href="#"> Menu I </a></li>
+					<li><a href="#"> Menu II </a></li>
+					<li><a href="#"> Menu 1II </a></li>
+				</ul>
+			</aside>
+
+			<!-- modul for en sektion -->
+			<main>
+
+				<!-- Butik herfra -->
+				<section class="butikFlex">
+						<article class="vare">
+								<h2>Morgenbrød</h2>
+								<img src="images/rundstykker.jpg" alt="produkt" width="250px" height="165px">
+								<button type="button">Click Me!</button>
+						</article>
+
+						<article class="vare">
+							<h2>Franskbrød</h2>
+							<img src="images/franskbrød.jpg" alt="produkt" width="250px">
+							<button type="button">Click Me!</button>
+						</article>
+
+						<article class="vare">
+							<h2>Kager</h2>
+							<img src="images/kanelsnegle.jpg" alt="produkt" width="250px">
+							<button type="button">Click Me!</button>
+						</article>
+
+				</section>
+
+
+
+				<section id="aaa">
+					<article>
+						<h2> h2 Overskrift</h2>
+						<figure>
+							<img src="images/Kringle.png" alt="" style="width: 200px; height: auto;">
+							<figcaption> Billedtekst </figcaption>
+						</figure>
+
+						<h3> h3 Underafsnit Overskrift </h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam facilis incidunt fuga doloribus unde labore quae magni ipsam deserunt odit, quidem est possimus omnis nisi ad nostrum vitae necessitatibus?
+						</p>
+					</article>
+				</section>
+
+				<!-- modul: en ny sektion -->
+				<section id="bbb">
+					<article>
+						<h2> h2 Overskrift </h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam facilis incidunt fuga doloribus unde labore quae magni ipsam deserunt odit, quidem est possimus omnis nisi ad nostrum vitae necessitatibus?
+						</p>
+
+						<h3> h3 Overskrift </h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam facilis incidunt fuga doloribus unde labore quae magni ipsam deserunt odit, quidem est possimus omnis nisi ad nostrum vitae necessitatibus?
+						</p>
+
+						<h3> h3 Overskrift </h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam facilis incidunt fuga doloribus unde labore quae magni ipsam deserunt odit, quidem est possimus omnis nisi ad nostrum vitae necessitatibus?
+						</p>
+
+					</article>
+				</section>
+			</main>
+		</div>
+
+		<!-- typisk kontaktinformationer, etc. -->
+		<footer>
+			&copy; Footer informationer her ..., 2021
+		</footer>
+
+	</div><!-- /wrap -->
+</body>
+
+</html>

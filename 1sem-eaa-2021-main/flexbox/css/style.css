@@ -1,0 +1,68 @@
+/**
+ * projekt: Flexbox tutorial
+ * fil: css/style.css
+ **/
+
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans+Condensed:wght@300&display=swap');
+/* font-family: 'Anton', sans-serif; */
+/* font-family: 'Open Sans Condensed', sans-serif; */
+
+/* Variabler: genbruges og gør designvalg enkle */
+:root {
+  /* farver */
+  --Pink: #ce7781;
+  --White: #fffbed;
+  --Blue: #77b0ff;
+
+  /* fonte */
+  --Anton: 'Anton', sans-serif; /* brødtekst */
+  --Tekst: 'Open Sans Condensed', cursive; /* overskrifter */
+
+  /* teksturer ("fliselagte baggrunde") */
+  --rundflise: URL('../images/fliserund.png');
+  --pinkflise: URL('../images/pinkflise.jpg');
+  --vandretflise: URL('../images/vandretflise.jpg');
+}
+
+/* Her bruges en variabel: --blue */
+body {
+  background-color: var(--White);
+  font-family: var(--Tekst);
+}
+
+/* Typografi */
+h1 {
+  font-family: var(--Anton);
+  text-align: center;
+}
+
+/* Layout: Flexbox */
+#content {
+  display: flex;
+}
+
+aside {
+  width: 10%;;
+  min-width: 100px;
+}
+
+main {
+  max-width: 600px;
+}
+/* Layout: Flexbox */
+#content {
+  display: flex;
+}
+
+.butikFlex{
+  display: flex;
+}
+
+.vare {
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 2em;
+  background-color: pink;
+  width: 50%;
+}
