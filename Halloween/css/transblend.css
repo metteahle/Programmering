@@ -1,0 +1,84 @@
+/**
+ * Effects: transitions and blends
+ **/
+
+/* remove browser specific styles */
+@import 'css/reset.css';
+
+/* variabler */
+:root {
+  --opacity: 60%;
+}
+
+/* CSS Animation (transition) */
+@keyframes myTransition {
+  from {
+    background-color: #000;
+    color: #000;
+  }
+  to {
+    background-color:rgba(221,138,13,0.0);
+    }
+}
+
+/* Layout */
+body {
+  background-color: #000;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  color: #fff;
+  letter-spacing: 0.133em;
+}
+
+h1,
+h2 {
+  padding-top: 3ch;
+  padding-left: 7vw;
+  padding-bottom: .7rem;
+  margin-bottom: .8rem;
+  font-size: 120%;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  text-transform: uppercase;
+}
+
+p,
+ul,
+li {
+  font-family: arial;
+  list-style-type: hiragana;
+  padding-left: 7vw;
+  margin-left: 1.9rem;
+  max-width: 52ch;
+  line-height: 1.6rem;
+}
+
+main {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding-top: 4vh;
+  min-height: 96vh; /* 96 + 4 = 100 */
+
+
+  /* baggrund: transparent gradient */
+  background:
+    linear-gradient(
+      #e2c936,
+      #e27236, rgba(221,138,13,0.4)),
+      url('../images/creepy.jpeg');
+
+  /* bg behavior */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* blend mode (a la Gimp / Photoshop) */
+  background-blend-mode: multiply;
+  /* se @url: https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-blend-mode */
+
+  /* Transition (== css animation) */
+  animation-name: myTransition; /* animationens navn */
+  animation-duration: 4s; /* varighed */
+  animation-timing-function: ease-in-out; /* easing */
+}

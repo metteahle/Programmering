@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>HTML Boilerplate</title>
+
+	<!-- SEO -->
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+
+	<!-- viewport skaleres -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- favicon = ikon i faneblad / browser -->
+	<link rel="icon" type="image/x-icon" href="images/favicon.png" />
+</head>
+
+<body>
+
+	<!-- "Wrapperen" holder sammen på dit design, fx hvis det skal centreres eller lign. -->
+	<div id="wrap">
+
+		<!-- Emmet tip: nav>ul>li{Menu $}*3 -->
+		<nav>
+			<!-- enkel burger-menu -->
+			<div id="showMenu">
+				<a id="burger" href="mob-menu.html">☰</a>
+			</div>
+
+			<!-- Menuer laves som regel i form af uordnede lister.
+					 Listerne kan styles så de går vandret eller lodret -->
+			<ul id="menu">
+				<li><a href="#aaa"> Hjem </a></li>
+				<li><a href="#bbb"> Om os </a></li>
+				<li><a href="#ccc"> Efterår </a></li>
+			</ul>
+
+		</nav>
+
+		<header>
+			<!-- site navn plus evt tagline og logo -->
+
+			<!-- ofte reserveres h1 til site-navn -->
+			<h1> Halloween eventyr </h1>
+		</header>
+
+		<!-- indhold -->
+		<main>
+			<!-- modul for en sektion -->
+			<section id="aaa">
+				<article>
+					<figure>
+						<img src="images/halloween.jpeg" alt="Halloween">
+						<figcaption> Hjemsøgt hus </figcaption>
+					</figure>
+					<h2> Skæmmende hyggelig </h2>
+					<p>
+						Kom og oplev Halloween i Tivoli Firheden i en uhyggelig lang periode fra d. 9. - 24. oktober - Hvis altså du tør?
+					</p>
+				<form>
+      		<input class="animation" type="button" onclick="window.location.href='https://friheden.dk/halloween/';" value="Klik her" />
+    		</form>
+				</article>
+			</section>
+
+			<!-- modul: en ny sektion -->
+			<section id="bbb">
+				<article>
+					<figure>
+						<img src="images/pumkin.jpeg" alt="pumkin carving">
+						<figcaption> Græskar figurer </figcaption>
+					</figure>
+
+					<h2> Skær græskar med familien </h2>
+					<p>
+						Hyg med familien ved at udhule græskar. Lav uhyggelige ansigter eller figurer, og placer et fyrfadslys i den færdige græskar. Uhyggelig sjov for hele familien.
+					</p>
+
+				</article>
+			</section>
+			<section id="ccc">
+				<article>
+					<figure>
+						<img src="images/cake.jpeg" alt="Halloween muffins">
+						<figcaption> Opskrift på lækre halloween muffins </figcaption>
+					</figure>
+
+					<h2> Uhyggelig lækre muffins</h2>
+					<p>
+							Bag uhyggeligt lækre Halloween muffins. Det kan selv de mindste være med til.
+					</p>
+
+				</article>
+			</section>
+		</main>
+
+		<!-- typisk kontaktinformationer -->
+		<footer>
+			&copy; Multimusen Design Worldwide, 2021
+		</footer>
+
+	</div><!-- /wrap -->
+</body>
+</html>

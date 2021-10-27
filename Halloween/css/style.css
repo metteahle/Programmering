@@ -1,0 +1,277 @@
+/**
+ * fil: css/style.css
+ **/
+
+/* Reset: Meyer Style */
+/* fjerner default browser styles */
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+/* font-family: 'Creepster', cursive */
+/* Farve- og fontvariabler */
+
+:root {
+  /* farver */
+  --dark: #190604;
+  --white: #ffffff;
+  --brun: #d18721;
+  --groen: #99a812;
+  --roed: #a82112;
+  --darkbrown: #2b241a;
+  --orange: #cb7300;
+
+  /* fonte */
+  --overskrift:'Creepster', cursive;
+  --broedtekst: Helvetica, sans-serif;
+
+  /* whitespace */
+  --whitespace: 5%;
+}
+
+/* Her bruges en variabel: --blue */
+body {
+  font-family: var(--broedtekst);
+  background-color: var(--brun);
+  color: var(--white);
+}
+
+/* Typografisk */
+h1,
+h2,
+h3 {
+  font-family: var(--overskrift);
+  font-size: 2.2em;
+  text-align: center;
+  margin-top: var(--whitespace);
+  margin-bottom: var(--whitespace);
+}
+
+p {
+  margin-left: var(--whitespace);
+  margin-right: var(--whitespace);
+  padding-bottom: var(--whitespace);
+  font-size: 1.2em;
+  max-width: 35ch; /* undgå lange ulæselige linjer */
+}
+
+figcaption {
+  font-style: italic;
+  margin-left: var(--whitespace);
+  margin-right: var(--whitespace);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Wrap */
+#wrap {
+  min-height: 100vh;
+}
+
+/* Navigation and footer */
+nav,
+footer {
+  background-color: var(--dark);
+  padding: 35px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#burger{
+  margin-left: 5%;
+}
+
+nav ul,
+footer ul {
+  display: flex; /* horisontal menu */
+  justify-content: center;
+}
+
+nav ul li,
+footer ul li {
+  margin-right: 4ch;
+}
+
+nav a,
+footer {
+  color: var(--white);
+  text-decoration: none;
+  float: left;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  margin-bottom: 0px; /* fordi: nedarver 20px fra nav,footer */
+}
+
+/* Sections (højde == skærmhøjde) */
+section {
+  background-color: var(--roed);
+}
+
+/* Billeder */
+img {
+  width: 100%;
+}
+
+/* MOBILE FIRST ØVELSER */
+
+/* 1. Mobile enheder (begynd her) */
+@media only screen and (max-width: 414px) {
+  /* 1.1: Vælg en baggrundsfarve til body */
+article{
+  background-color: var(--darkbrown);
+}
+
+body{
+  background-color: var(--orange);
+}
+
+
+  /* 1.2: Vis burgeren */
+
+  /* 1.3: Skjul menuen */
+#menu{
+  display: none;
+}
+  /* 1.4: Brug en stor læsbar font til brødtekst,
+  en passende kreativ font til overskrifter,
+  og store links man kan ramme med fingrene */
+
+p{
+  font-size: 150%;
+}
+  /* 1.5: Den responsive menu (mob-menu.html)
+
+   * Knapper
+   * Links
+   * Burgermenu (evt. med CSS animation)
+
+   Styling af den responsive menu mob-menu.html
+   med transitioner, photoshop-agtige effekter
+   samt klikbare billeder.
+  */
+  /* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  /* The element to apply the animation to */
+.animation {
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-direction: reverse;
+    animation-iteration-count: 4;
+    border: none;
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 150%;
+    color: var(--white);
+  }
+
+}
+
+/* mobil der ligger ned */
+@media only screen and (min-width: 736px) {
+
+#burger{
+  display: none;
+}
+
+.animation {
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-direction: reverse;
+    animation-iteration-count: 4;
+    border: none;
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 150%;
+    color: var(--white);
+  }
+
+p{
+  max-width: none;
+  font-size: 150%;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 400%;
+}
+
+nav ul{
+  font-size: 150%;
+}
+
+}
+
+/* 2. Tablets mv. (fortsæt her) */
+@media only screen and (min-width: 415px) {
+
+  #burger{
+    display: none;
+  }
+
+  }
+
+  /* 2.1: Giv baggrunden en farve */
+
+  /* 2.2: Give #wrap en fast max-bredde, fx 700px.
+     2.3: Sørg for at #wrap står i centrum af vinduet. */
+
+  /* 2.4 Vis burger */
+
+  /* 2.5: Skjul menuen */
+
+  /* --- Flexbox (responsivt flex) --- */
+
+  /* 2.6: Få main til at flexe, sæt flex-wrap til wrap og gab til 10px */
+
+  /* 2.7: Hvordan underelementer gøres responsive:
+
+  main > * betyder: for alle "børn" af main { ... css her  ...}
+  Se disse tutorials
+
+  @url: https://flexbox-pattern-cheatsheet.kevinpowell.co/
+  @url: https://www.w3schools.com/cssref/css3_pr_flex.asp
+
+  main > * {
+    flex: 1 1 32ch;
+  }
+
+  Forkortelsen 'flex' kan sætte flere værdier på en gang.
+  Mere om anvendelsen af flex her:
+  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+
+  Fx: Three values: flex-grow | flex-shrink | flex-basis
+  flex: 2 2 10%;
+
+  Alternativt bruges box sizing, se
+  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+  */
+
+}
+
+/* 3. Stor skærm (slut her) */
+@media only screen and (min-width: 760px) {
+
+  /* 3.1: Giv baggrunden en farve og sørg for god farvekontrast til tekst */
+
+  /* 3.2: Skjul burgeren */
+
+  /* 3.3: Vis menuen */
+
+  /* 3.4: Gør menuen horisontal */
+
+  /* 3.5 Giv #wrap en max-width på 80% og lad #wrap stå centreret i vinduet */
+
+  /* 3.6 Lad den føste section fylde 100% i bredden  */
+
+}
